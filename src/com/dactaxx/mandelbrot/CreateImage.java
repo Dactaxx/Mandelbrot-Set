@@ -9,13 +9,16 @@ import javax.imageio.ImageIO;
 
 public class CreateImage {
 	public void makeImage() {
-		int width = 7680;
+		int width = 3840; //double default for mandelbrotzoomhuge
 		int height = 2160;
 		BufferedImage bi = new BufferedImage(width, height, BufferedImage.TYPE_INT_ARGB);
-		int zoom = 90000; //default is 900
+		int zoom = 900; //default is 900, desktop background is 90000
 		int a = 2;
-		double px = -1.108; //default is -.5
-		double py = .23; //default is 0s
+		double px = -.5; //default is -.5, desktop background is -1.108
+		double py = 0; //default is 0, desktop background is .23
+		
+		//stackoverflow probably means iterations or resolution is too high
+		//default iterations: 3000
 		
 		long start = System.currentTimeMillis();
 		for(double row = 0; row < width; row++) {
